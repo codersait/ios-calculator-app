@@ -33,7 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px solid red;
 }
 
 .previous-display {
@@ -72,7 +71,7 @@ body {
 }
 
 .button.number-0 {
-  grid-column: 1 / span 2;
+  grid-column: span 2;
   justify-content: flex-start;
   padding-left: 43px;
   width: 215px;

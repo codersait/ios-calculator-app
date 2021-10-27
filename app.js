@@ -100,15 +100,14 @@ buttonsContainer.addEventListener('click', (e) => {
         break;
       case '±':
         if (!currentDisplayField.innerText.includes('-')) {
-          currentDisplayField.innerText += `-${currentDisplayField.innerText}`
+          currentDisplayField.prepend('-')
         }
-
-
         break;
       case '%':
-        if (currentDisplayField.innerText !== '') {
-          currentDisplayField.innerText = Number(currentDisplayField.innerText) / 100;
-        }
+        // if (currentDisplayField.innerText !== '') {
+        //   currentDisplayField.innerText = Number(currentDisplayField.innerText) / 100;
+        // }
+        currentDisplayField.innerText = currentDisplayField.innerText.substring(0, currentDisplayField.innerText.length - 1)
       default:
         break;
     }
