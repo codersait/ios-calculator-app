@@ -1,18 +1,6 @@
 const currentDisplayField = document.querySelector('.current-display')
 const previousDisplayField = document.querySelector('.previous-display')
-const currentDisplayText = currentDisplayField.innerText;
-const previousDisplayText = previousDisplayField.innerText;
 const buttonsContainer = document.querySelector('.buttons-container')
-
-
-// previousDisplayField.innerText = previousDisplayText
-// currentDisplayField.innerText = currentDisplayText
-
-// get the number buttons
-const numberButtons = document.querySelectorAll('number')
-// numberButtons.forEach((number) => {
-//   number.addEventListener('click',)
-// })
 
 buttonsContainer.addEventListener('click', (e) => {
   // numbers
