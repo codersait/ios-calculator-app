@@ -69,7 +69,11 @@ buttonsContainer.addEventListener('click', (e) => {
           if (previousDisplayField.innerText.includes('÷')) {
             const currentNumber = Number(currentDisplayField.innerText)
             const previousNumber = Number(previousDisplayField.innerText.split(' ')[0])
-            currentDisplayField.innerText = previousNumber / currentNumber
+            if (currentNumber === 0) {
+              currentDisplayField.innerText = 'Error'
+            } else {
+              currentDisplayField.innerText = previousNumber / currentNumber
+            }
             previousDisplayField.innerText = ''
           }
           if (previousDisplayField.innerText.includes('×')) {
