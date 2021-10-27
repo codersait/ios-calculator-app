@@ -36,13 +36,13 @@ buttonsContainer.addEventListener('click', (e) => {
 
         }
         break;
-      case '-':
+      case '−':
         if (currentDisplayField.innerText !== '') {
           previousDisplayField.innerText = `${currentDisplayField.innerText} ${operator}`;
           currentDisplayField.innerText = ""
         }
         break;
-      case 'x':
+      case '×':
         if (currentDisplayField.innerText !== '') {
           previousDisplayField.innerText = `${currentDisplayField.innerText} ${operator}`;
           currentDisplayField.innerText = ""
@@ -62,7 +62,7 @@ buttonsContainer.addEventListener('click', (e) => {
             currentDisplayField.innerText = currentNumber + previousNumber
             previousDisplayField.innerText = ''
           }
-          if (previousDisplayField.innerText.includes('-')) {
+          if (previousDisplayField.innerText.includes('−')) {
             const currentNumber = Number(currentDisplayField.innerText)
             const previousNumber = Number(previousDisplayField.innerText.split(' ')[0])
             currentDisplayField.innerText = previousNumber - currentNumber
@@ -76,7 +76,7 @@ buttonsContainer.addEventListener('click', (e) => {
             currentDisplayField.innerText = previousNumber / currentNumber
             previousDisplayField.innerText = ''
           }
-          if (previousDisplayField.innerText.includes('x')) {
+          if (previousDisplayField.innerText.includes('×')) {
             const currentNumber = Number(currentDisplayField.innerText)
             const previousNumber = Number(previousDisplayField.innerText.split(' ')[0])
             currentDisplayField.innerText = previousNumber * currentNumber
