@@ -15,14 +15,13 @@ const numberButtons = document.querySelectorAll('number')
 // })
 
 buttonsContainer.addEventListener('click', (e) => {
-  //numbers
-  if (e.target.classList.contains('number')) {
-    if (currentDisplayField.innerText.length < 8)
-      currentDisplayField.innerText += e.target.innerText
+  // numbers
+  if (e.target.classList.contains('number') && currentDisplayField.innerText.length < 8) {
+    currentDisplayField.innerText += e.target.innerText
   }
-  if (e.target.classList.contains('decimal')) {
-    if (!currentDisplayField.innerText.includes('.'))
-      currentDisplayField.innerText += e.target.innerText
+  // decimal
+  if (e.target.classList.contains('decimal') && !currentDisplayField.innerText.includes('.')) {
+    currentDisplayField.innerText += e.target.innerText
   }
 
   // operands
@@ -33,7 +32,6 @@ buttonsContainer.addEventListener('click', (e) => {
         if (currentDisplayField.innerText !== '') {
           previousDisplayField.innerText = `${currentDisplayField.innerText} ${operator}`;
           currentDisplayField.innerText = ""
-
         }
         break;
       case '−':
@@ -70,9 +68,7 @@ buttonsContainer.addEventListener('click', (e) => {
           }
           if (previousDisplayField.innerText.includes('÷')) {
             const currentNumber = Number(currentDisplayField.innerText)
-            // console.log(currentNumber);
             const previousNumber = Number(previousDisplayField.innerText.split(' ')[0])
-            console.log(previousNumber);
             currentDisplayField.innerText = previousNumber / currentNumber
             previousDisplayField.innerText = ''
           }
