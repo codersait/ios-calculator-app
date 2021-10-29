@@ -93,6 +93,8 @@ buttonsContainer.addEventListener('click', e => {
       case '±':
         if (!currentDisplayField.innerText.includes('-')) {
           currentDisplayField.prepend('-');
+        } else {
+          currentDisplayField.innerText = currentDisplayField.innerText.split('-')[1];
         }
         break;
       case '%':
